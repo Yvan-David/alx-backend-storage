@@ -12,7 +12,7 @@ class Cache():
         self._redis = redis.Redis()
         self._redis.flushdb()
 
-    def store(self: None, data) -> str:
+    def store(self, data: None) -> str:
         """ assignng key value pair """
         key = str(uuid.uuid4())
         self._redis.set(key, data)
